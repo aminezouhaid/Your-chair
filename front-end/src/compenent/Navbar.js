@@ -20,9 +20,9 @@ export default function Navbar() {
       </div>
       
       <div className='book'>
-      <img className='reseux' src={require("./img/logo2.png")}alt="" />
-      <img  className='reseux'  src={require("./img/logo2.png")}alt="" /> 
-      <img  className='reseux'  src={require("./img/logo2.png")}alt="" />
+      <a></a><img className='reseux' src={require("./img/facebook.png")}alt="" />
+      <img  className='reseux'  src={require("./img/linkedin.png")}alt="" /> 
+      <img  className='reseux'  src={require("./img/twitter.png")}alt="" />
       <a className='bookbtn' href="#"> BOOK NOW</a>
       </div>
 
