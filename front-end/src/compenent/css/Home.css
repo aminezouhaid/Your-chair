@@ -1,0 +1,14 @@
+.Container{
+    
+  
+     background-image: url("../img/1.jpg");
+     height:600px;
+     background-size: 100% 100%;
+}
+.bagrondblack{
+     position: relative;
+     background-color: black;
+     opacity: 50%;
+    height: 600px;
+}
+
