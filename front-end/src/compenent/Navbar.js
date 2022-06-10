@@ -18,11 +18,11 @@ export default function Navbar() {
         <h5 className='logotext'>CHAIR</h5>
 
       </div>
-      
+     
       <div className='book'>
-      <a></a><img className='reseux' src={require("./img/facebook.png")}alt="" />
-      <img  className='reseux'  src={require("./img/linkedin.png")}alt="" /> 
-      <img  className='reseux'  src={require("./img/twitter.png")}alt="" />
+      <a href="#"> <img className='reseux' src={require("./img/facebook.png")}alt="" /></a>
+      <a href="#"><img  className='reseux'  src={require("./img/linkedin.png")}alt="" /> </a>
+      <a href="#"> <img  className='reseux'  src={require("./img/twitter.png")}alt="" /> </a>
       <a className='bookbtn' href="#"> BOOK NOW</a>
       </div>
 
