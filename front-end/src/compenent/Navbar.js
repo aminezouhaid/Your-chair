@@ -30,4 +30,6 @@ export default function Navbar() {
     </div>
   )
 }
-
+ <script>
+  
+ </script>

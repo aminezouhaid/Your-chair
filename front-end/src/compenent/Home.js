@@ -13,10 +13,11 @@ export default function Home() {
       <a  className='buttonbook' href="#">BOOK NOW</a>
       
     </div>
-    <a  className='flech' href="#">⇩</a>
+    <a href=""><img className='flech' src={require("./img/flech.png")} alt="" /></a>
    </div>
    <div className='images'>
     <img className='img1' src={require("./img/a.jpg")} alt="" />
+    
     <img className='img1' src={require("./img/b.jpg")} alt="" />
     <img className='img1' src={require("./img/salon-coiffeur.png")} alt="" />
 
@@ -24,8 +25,8 @@ export default function Home() {
    </div>
    <div className='images'>
     <img className='img1' src={require("./img/c.jpg")} alt="" />
-    <img className='img1' src={require("./img/h.jfif")} alt="" />
     <img className='img1' src={require("./img/nn.jpg")} alt="" />
+    <img className='img1' src={require("./img/h.jfif")} alt="" />
    </div>
     </div>
   )
