@@ -1,0 +1,38 @@
+.loginbutton{
+    background-color: rgb(227, 191, 11);
+font-family: 'Nova Square';
+}
+.loginbutton:hover{
+    background-color: rgb(184, 156, 14);
+}
+.h-screen{
+    background-image: url('../img/back.jpg');
+    background-size: 100% 100%;
+}
+.titlelogin{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-decoration: underline #e3bf0b;
+    font-family: 'Nova Square';
+}
+.Registterbtn{
+    color: #e3bf0b;
+    text-decoration: none;
+    font-family: 'Nova Square';
+}
+
+.Registterbtn:hover{
+    color: #ae940d;
+}
+.parag{
+    color: white;
+    font-family: 'Nova Square';
+    
+}
+.welcom{
+    color: white;
+    font-size: 28px;font-family:'Nova Square' ;
+    margin-top: 30px;
+}

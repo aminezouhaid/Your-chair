@@ -23,7 +23,7 @@ export default function Navbar() {
       <a href="#"> <img className='reseux' src={require("./img/facebook.png")}alt="" /></a>
       <a href="#"><img  className='reseux'  src={require("./img/linkedin.png")}alt="" /> </a>
       <a href="#"> <img  className='reseux'  src={require("./img/twitter.png")}alt="" /> </a>
-      <a className='bookbtn' href="#"> BOOK NOW</a>
+      <a className='bookbtn' href="/login"> BOOK NOW</a>
       </div>
 
 
