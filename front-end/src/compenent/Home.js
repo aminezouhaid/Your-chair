@@ -10,7 +10,7 @@ export default function Home() {
     <div className='text'>
       <h5 className='title1'>You Know You’r Barber Shop</h5>
       <h1 className='title2'>Time is precious to you, so book your Chair and win your time</h1>
-      <a  className='buttonbook' href="#">BOOK NOW</a>
+      <a  className='buttonbook' href="/Login">BOOK NOW</a>
       
     </div>
     <a href=""><img className='flech' src={require("./img/flech.png")} alt="" /></a>

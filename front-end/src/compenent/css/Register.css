@@ -16,7 +16,21 @@
     }
     }
 
-   .helooworld{
+  
+
+   .heelocon{
     background-image: url('../img/back.jpg');
-        
+   }
+   .input1{
+    width: 40%;
+   }
+   .input2{
+    width: 40%;
+   }
+
+   .input3{
+    width: 48%;
+   }
+   .input4{
+    width: 48%;
    }

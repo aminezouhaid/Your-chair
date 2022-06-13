@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className='allNav'>
       
       <div className='menu'>
-        <a className='homebtn' href="#">HOME</a>
+        <a className='homebtn' href="/">HOME</a>
         <a className='btn' href="#">ABOUT</a>
         <a className='btn' href="#">CATEGORIES</a>
         <a className='btn' href="#">CONTACT</a>
