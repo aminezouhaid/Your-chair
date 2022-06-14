@@ -1,9 +1,17 @@
 .loginbutton{
     background-color: rgb(227, 191, 11);
 font-family: 'Nova Square';
+border: solid 2px black;
 }
 .loginbutton:hover{
     background-color: rgb(184, 156, 14);
+}
+.loginbutton2{
+    color :#e3bf0b;
+    background-color: black;
+    border: solid 1px #e3bf0b ;
+    font-family: 'Nova Square';
+
 }
 .h-screen{
     background-image: url('../img/back.jpg');

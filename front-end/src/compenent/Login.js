@@ -50,6 +50,7 @@ export default function Login() {
       }else{
         window.location="/dashboardadmin"
         toastr.success('Welcome Admin')
+        alert("wellcoom Admin")
         
   
       }
@@ -107,11 +108,17 @@ export default function Login() {
            
          </div>
           {/* Submit button */}
-          <button type="submit" className="loginbutton inline-block px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-#eeb413-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
+          <button type="submit" className="  mb-4 loginbutton inline-block px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-#eeb413-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
             Sign in
           </button>
+          
     
-        </form>
+        </form> 
+        <a href="/loginadmin">
+            <button className="loginbutton2 inline-block px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md  hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            Are You Admin ?
+          </button>
+          </a>
       </div>
     </div>
   </div>
