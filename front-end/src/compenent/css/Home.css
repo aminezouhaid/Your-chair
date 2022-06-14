@@ -79,6 +79,10 @@
      width: 30%;
      height: 250px;
 }
+.img1:hover{
+     width: 34%;
+     height: 260px;
+}
 .ptudcut{
      font-size: 40px;
      font-family: "Nova Square";
