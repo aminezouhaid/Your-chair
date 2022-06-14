@@ -43,7 +43,9 @@ const userLogin = async (userCreds,role,res)=>{
         user_id:user._id,
         role:user.role,
         username:user.username,
-        email:user.email
+        email:user.email,
+        phone:user.phone,
+       
       },
       SECRET ,
       {
@@ -58,6 +60,8 @@ const userLogin = async (userCreds,role,res)=>{
           username:user.username,
           role:user.role,
           email:user.email,
+          phone:user.phone
+          
         },
       
         token : `Bearer ${token}`,
