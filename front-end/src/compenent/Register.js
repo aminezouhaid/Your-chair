@@ -3,6 +3,7 @@ import './css/Register.css'
 import toastr from 'toastr';
 import Axios from 'axios';
 import Navbar from './Navbar'
+import Footer from './Footer';
 export default function Register() {
   
   const url = "http://localhost:8000/api/users/register-user";
@@ -113,7 +114,7 @@ export default function Register() {
     </div>
   </div>
 </section>
-
+ <Footer/>
     </div>
   )
 }

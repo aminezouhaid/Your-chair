@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer';
 import './css/Login.css'
 import Axios from 'axios';
 import jwtdecode from "jwt-decode";
@@ -7,6 +8,8 @@ import toastr from 'toastr';
 import { useState } from 'react'
 export default function Loginadmin() {
 
+
+  
     const url="http://localhost:8000/api/users/login-admin"
     const [values, setvalues] = useState ({
         email:"",
@@ -114,6 +117,7 @@ export default function Loginadmin() {
 </div>
 </div>
 </section>
+<Footer/>
     </div>
   )
 }

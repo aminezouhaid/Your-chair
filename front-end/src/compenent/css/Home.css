@@ -4,7 +4,9 @@
      background-image: url("../img/barber_masthead.webp");
      height:600px;
      background-size: 100% 100%;
+     opacity: 90%;
 }
+
 .bagrondblack{
     
     height: 600px;
@@ -42,12 +44,21 @@
 }
 
 .flech{
-     color: #ffffff;
-   width:70px;
-   height: 70px;
-    
-     margin: 60px 0px 0px 0px;
+    color: #ffffff;
+    margin: 60px 0px 0px 0px;
+    transition: 0.5s;
+    width:60px;
+    height: 60px;
 }
+.flech:hover{
+     color: #ffffff;
+     width:70px;
+     height: 70px;
+     transition: 0.5s;
+
+     
+   
+ }
 .buttonbook{
      background-color: #ffd26169;
      text-decoration: none;
@@ -57,6 +68,9 @@
      border-radius:15px ;
      font-family: "Nova Square";
      font-size: 20px;
+     transition: 0.5s;
+
+     
 
     
 }
@@ -64,6 +78,8 @@
      text-decoration: none;
      color:#FFD361;
      border: solid 1.5px #fefefe;
+     transition: 0.5s;
+     font-size: 24px;
      
      
     
@@ -78,10 +94,12 @@
 .img1{
      width: 30%;
      height: 250px;
+     transition: 0.5s;
 }
 .img1:hover{
-     width: 34%;
+     width: 32%;
      height: 260px;
+     transition: 0.5s;
 }
 .ptudcut{
      font-size: 40px;

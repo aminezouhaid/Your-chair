@@ -13,13 +13,13 @@
 .menu{
     width: 40%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
 }
 .homebtn{
-   
+   color: #FFD361;
     text-decoration: none;
-    color: #FFD361;
+    
    
     font-family: "Nova Square";
 
@@ -36,17 +36,23 @@
     color: white;
     text-decoration: none;
     font-family: "Nova Square";
+    transition: 0.5s;
+
 }
 .btn:hover{
     color:#FFD361 ;
     text-decoration: none;
     font-family: "Nova Square";
     text-decoration: underline;
+    transition: 0.5s;
+
 }
 
 .logo{
     width: 20%;
     display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 .imglogo{
@@ -54,7 +60,7 @@
     width: 150px;
 }
 .logotext{
-    color: white;
+    color:#FFD361;
     font-family: "Nova Square";
     }
       
@@ -68,9 +74,13 @@
 .reseux{
     width:30px;
     height:30px;
+    transition: 0.5s;
+
 }
 .reseux:hover{
    opacity: 70%;
+   transition: 0.5s;
+
 }
 .bookbtn{
     text-decoration: none;
@@ -79,6 +89,7 @@
     padding :5px;
     border-radius:15px ;
     font-family: "Nova Square";
+    transition: 0.5s;
     
 
 }
@@ -86,6 +97,8 @@
     text-decoration: none;
     color:#FFD361;
     border: solid 1.5px #ffffff;
+   
+    transition: 0.5s;
  
 
 }

@@ -5,6 +5,7 @@ import Axios from 'axios';
 import jwtdecode from "jwt-decode";
 import toastr from 'toastr';
 import { useState } from 'react'
+import Footer from './Footer';
 export default function Login() {
 
   const url="http://localhost:8000/api/users/login-user"
@@ -123,7 +124,7 @@ export default function Login() {
     </div>
   </div>
 </section>
-
+ <Footer/>
      
   </div>
   )

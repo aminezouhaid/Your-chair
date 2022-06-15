@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './css/reservation.css'
 export default function Reservation() {
   return (
     <div>
@@ -18,6 +18,7 @@ export default function Reservation() {
        </nav>
 
        <div class="container-fluid">
+		
 	<div class="row">
 		<nav class="col-md-2 d-none d-md-block sidebar">
 			<div class="sidebar-sticky">
@@ -60,42 +61,7 @@ export default function Reservation() {
 			</div>
 		</nav>
 		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 my-3">
-			<div class="card-list">
-				<div class="row">
-                <header class="projects-header">
-						<div class="title">All Customers</div>
-						<div class="count">| 32 Customer</div>
-						<i class="zmdi zmdi-download"></i>
-					</header>
 
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card blue">
-							<div class="title">all projects</div>
-							<i class="zmdi zmdi-upload"></i>
-							<div class="value">89</div>
-							<div class="stat"><b>13</b>% increase</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card green">
-							<div class="title">team members</div>
-							<i class="zmdi zmdi-upload"></i>
-							<div class="value">5,990</div>
-							<div class="stat"><b>4</b>% increase</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card orange">
-							<div class="title">total budget</div>
-							<i class="zmdi zmdi-download"></i>
-							<div class="value">$80,990</div>
-							<div class="stat"><b>13</b>% decrease</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
 			
 		</main>
 	</div>

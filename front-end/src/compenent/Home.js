@@ -1,6 +1,7 @@
 import React from 'react'
 import './css/Home.css'
 import Navbar from './Navbar'
+import Footer from './Footer'
 export default function Home() {
   return (
     <div className='Container'>
@@ -28,6 +29,10 @@ export default function Home() {
    <img className='img1' src={require("./img/c.jpg")} alt="" />
     <img className='img1' src={require("./img/h.jfif")} alt="" />
    </div>
+   
+
+   
+   <Footer/>
     </div>
   )
 }
