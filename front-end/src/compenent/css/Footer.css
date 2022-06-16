@@ -16,7 +16,7 @@ section {
 }
 
 .footer-distributed{
-	background: #666;
+	background: #1b2431;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -67,7 +67,7 @@ section {
 }
 
 .footer-distributed .footer-company-name{
-	color:  #222;
+	color:  rgb(255, 255, 255);
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;

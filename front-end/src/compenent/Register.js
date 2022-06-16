@@ -31,12 +31,14 @@ export default function Register() {
 				console.log("🚀 ~ file: Register.js ~ line 29 ~ .then ~ res", res.data)
 
 				if (res.data.error) {
+             alert('Samthing input is empty')
 					toastr.error(res.data.error)
+       
 
 				} else {
 					window.location="/Login"
 					toastr.success('done')
-          alert("hello")
+          alert('Register Succes Thank You')
 
 					
 				}
@@ -61,7 +63,8 @@ export default function Register() {
   return (
 
     <div>
-  <Navbar/>
+      <div><Navbar/></div>
+    
   <section className="h-screen ">
   <div className="container px-6 py-12 h-full">
     <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
@@ -88,12 +91,15 @@ export default function Register() {
           </div>
           <div className="mb-3 flex justify-between">
             <input type="password" onChange={(event) => handle(event)} id="password" name="password" className="input3 form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Password" />
-          
+            <input type="password" onChange={(event) => handle(event)}  name="password" className="input3 form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder=" Confirm Password" />
+
+
+
           </div>
           <div className="mb-3 flex">
          
           
-            <input type="tel" onChange={(event) => handle(event)} id="phone" name="phone"  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder=" +212 Phone" />
+            <input type="telephone" onChange={(event) => handle(event)} id="phone" name="phone"  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder=" +212 Phone" />
           </div>
           
           {/* Submit button */}
@@ -114,6 +120,7 @@ export default function Register() {
     </div>
   </div>
 </section>
+
  <Footer/>
     </div>
   )
