@@ -8,6 +8,8 @@ export default function Footer() {
 <footer class="footer-distributed">
 
 			<div class="footer-left">
+			<a href="/"> <img className='imglogo' src={require("./img/logo2.png")}alt="" /></a>
+
 
 				<h3>Y'our <span>Chair</span></h3>
 

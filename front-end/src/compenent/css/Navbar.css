@@ -20,8 +20,7 @@
 .homebtn{
    color: #FFD361;
     text-decoration: none;
-    
-   
+    font-size: 13px;
     font-family: "Nova Square";
 
 }
@@ -38,6 +37,7 @@
     text-decoration: none;
     font-family: "Nova Square";
     transition: 0.5s;
+    font-size: 13px;
 
 }
 .btn:hover{
@@ -46,6 +46,7 @@
     font-family: "Nova Square";
     text-decoration: underline;
     transition: 0.5s;
+   
 
 }
 

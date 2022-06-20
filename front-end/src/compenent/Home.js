@@ -146,34 +146,6 @@ export default function Home() {
 
 
 
-<div className="restaurant">
-  <a href="/login">
-  <div className="reservation_btn">
-    Réserver
-  </div></a>
-  <div className="close_it">
-    <i className="fas fa-times" />
-  </div>
-  <div className="infos_left">
-    <div className="image_container4" >
-    </div>
-    <div className="prix_block">
-      <span className="text_prix">Prix : </span>
-      <span className="prix">75 DH</span>
-    </div>
-    <div className="block_infos">
-      <h1>Haircut + Mask</h1>
-      <div className="adress_block">
-        <i className="fas fa-map-marker-alt" />
-        <span className="adress">Rue Saada</span>
-       
-      </div>
-      <div className="adress_block"> 
-      <span className="locate">Youssoufia</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 </div>
    <Footer/>

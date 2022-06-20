@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import './css/product.css'
 export default function Productes() {
     const [productes, getProductes] = useState(false);
 
@@ -21,6 +22,7 @@ export default function Productes() {
 
         <div>
            
+           
 
             <nav className='navdash'>
                 <div className='logoadmin'>
@@ -39,13 +41,13 @@ export default function Productes() {
 
             <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
                 <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">YOU'R CHAIR</a>
-                <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" />
+                <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
-                    <li class="nav-item text-nowrap">
-                       
-                    </li>
+               <button className='buttonAdd'>+ Add Products</button>
+
                 </ul>
             </nav>
+            
             <div class="container-fluid">
                 <div class="row">
                     <nav class="col-md-2 d-none d-md-block sidebar">
@@ -98,9 +100,12 @@ export default function Productes() {
                          
                                 <header class="projects-header"  >
                                     <div class="title">All Productes</div>
+                                    
                                     <div class="count"> {productes.length} product</div>
                                     <i class="zmdi zmdi-download"></i>
                                 </header>
+                                
+      
                                  
                                 {/* { productes &&   productes.map(producte => 
                                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
@@ -119,6 +124,12 @@ export default function Productes() {
   <div className="reservation_btn">
     Réserver
   </div></a>
+  <a href="/login">
+  <i class="fa-solid fa-pen  btnupdate"></i>
+ </a>
+  <a href="/login">  <i class="fa-solid fa-trash-can btndelet"></i>
+
+   </a>
   <div className="close_it">
     <i className="fas fa-times" />
   </div>
@@ -137,11 +148,14 @@ export default function Productes() {
        
       </div>
       <div className="adress_block"> 
-      <i className="fas fa-map-marker-alt" />
-      <span className=" locate">Youssoufia</span>
+   
+        <i className="fas fa-map-marker-alt" /><span className=" locate">Youssoufia</span>
       </div>
+      
     </div>
+  
   </div>
+  
 </div>
  ) }
                               
