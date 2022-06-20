@@ -2,7 +2,14 @@
 
 import './css/dashbord.css'
 export default function Dashbordadmin() {
-  
+	const signout =  () =>{
+		const jwt =  localStorage.removeItem('token');
+	   
+		window.location="/login";
+		return jwt;
+	  
+	  
+	  }
   
   return (
     <div> 
@@ -17,8 +24,7 @@ export default function Dashbordadmin() {
         <a className='btn' href="#">CONTACT</a>
 
       </div>
-      <div className='profile'><a className='btn'  href=""><button>Logout</button></a> </div>
-       </nav>
+	  <small>   <span className="btn" style={{cursor:'pointer'}}  onClick={signout} > Logout </span> </small>       </nav>
 
 
        <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
@@ -46,7 +52,7 @@ export default function Dashbordadmin() {
                 </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">
+						<a class="nav-link" href="/productes">
                   <i class="zmdi zmdi-shopping-cart"></i>
                   Products
                 </a>

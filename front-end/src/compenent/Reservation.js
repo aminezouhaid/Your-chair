@@ -36,7 +36,7 @@ export default function Reservation() {
                 </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">
+						<a class="nav-link" href="/productes">
                   <i class="zmdi zmdi-shopping-cart"></i>
                   Products
                 </a>

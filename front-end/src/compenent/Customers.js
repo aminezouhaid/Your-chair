@@ -23,7 +23,7 @@ export default function Customers() {
 	<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
 	<ul class="navbar-nav px-3">
 		<li class="nav-item text-nowrap">
-			<a class="nav-link"  href="#">Sign out</a>
+		
 		</li>
 	</ul>
 </nav>
@@ -45,7 +45,7 @@ export default function Customers() {
                 </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">
+						<a class="nav-link" href="/productes">
                   <i class="zmdi zmdi-shopping-cart"></i>
                   Products
                 </a>
