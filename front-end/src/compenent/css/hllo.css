@@ -76,12 +76,6 @@ ul {
 .restaurant .reservation_btn:hover {
 	right: 10%;
 }
-.restaurant .btndelet:hover {
-	right: 1%;
-}
-.restaurant .btnupdate:hover {
-	right: 1%;
-}
 .restaurant .reservation_btn--active {
 	right: 0%;
 	top: 0%;

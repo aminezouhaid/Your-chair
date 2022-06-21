@@ -15,8 +15,10 @@ export default function Home() {
       <a  className='buttonbook' href="/Login">BOOK NOW</a>
       
     </div>
+  
     <a href=""><img className='flech' src={require("./img/flech.png")} alt="" /></a>
    </div>
+   
    <div className='images'>
     <img className='img1' src={require("./img/a.jpg")} alt="" />
    <h1 className='ptudcut'>Product Lifestyle Gallery</h1>

@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './css/product.css'
 export default function Productes() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     const [productes, getProductes] = useState(false);
 
     const getAllProductes = () => {
@@ -17,7 +24,32 @@ export default function Productes() {
         getAllProductes();
     }, []);
 
+     const  deleteFoods = async (id) => {
+   
+        try{
+            
+     
+            const response = await axios.delete('http://localhost:8000/api/product/'+id);
+                   
 
+            let data = response.data.category
+       window.location="/productes";
+    
+        }catch(err){
+    console.log('this is error');
+    
+        }
+    }
+
+    const handleDelete = (_id) => {
+    
+    
+    
+    
+      
+     
+      
+      };
     return (
 
         <div>
@@ -44,6 +76,10 @@ export default function Productes() {
                 <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
                <button className='buttonAdd'>+ Add Products</button>
+               
+
+
+               
 
                 </ul>
             </nav>
@@ -127,9 +163,9 @@ export default function Productes() {
   <a href="/login">
   <i class="fa-solid fa-pen  btnupdate"></i>
  </a>
-  <a href="/login">  <i class="fa-solid fa-trash-can btndelet"></i>
+  <button type='submit' onClick={() => deleteFoods(producte._id)}><i class="fa-solid fa-trash-can btndelet"></i></button>  
 
-   </a>
+
   <div className="close_it">
     <i className="fas fa-times" />
   </div>

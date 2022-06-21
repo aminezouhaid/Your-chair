@@ -84,6 +84,10 @@
     
    
 }
+.feedback{
+    height: 500px;
+  background-color: #585a5c;
+}
 .images{
     height: 300px;
     background-color:#000000;
