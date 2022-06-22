@@ -1,5 +1,5 @@
-
-
+import axios from 'axios';
+import { useEffect,useState } from 'react';
 import './css/dashbord.css'
 export default function Dashbordadmin() {
 	const signout =  () =>{
@@ -10,6 +10,39 @@ export default function Dashbordadmin() {
 	  
 	  
 	  }
+	  const [reservations, getreservations] = useState(false);
+	  const url = "http://localhost:8000/api/orders"
+	  const getAllreservations =  async () => {
+       await axios.get(url)
+            .then((res) => {
+                const allreservatons = res.data.order;
+                getreservations(allreservatons);
+                console.log('res',res);
+				
+            })
+            .catch(error => console.error(`error:${error}`));
+    }
+    useEffect(() => {
+        getAllreservations();
+    }, []);
+
+
+	const  deletOrders = async (id) => {
+   
+        try{
+            
+     
+            const response = await axios.delete('http://localhost:8000/api/orders/'+id);
+
+            let data = response.data.category
+       window.location="/dashboardadmin";
+    
+        }catch(err){
+    console.log('this is error');
+    
+        }
+    }
+
   
   return (
     <div> 
@@ -82,7 +115,7 @@ export default function Dashbordadmin() {
 				<div class="projects-inner">
 					<header class="projects-header">
 						<div class="title">All Réservations</div>
-						<div class="count">| 32 Réservation</div>
+						<div class="count">| {reservations.length} Réservation</div>
 						<i class="zmdi zmdi-download"></i>
 					</header>
 					<table class="projects-table">
@@ -96,176 +129,38 @@ export default function Dashbordadmin() {
 								<th class="text-right">Actions</th>
 							</tr>
 						</thead>
-						<tr>
+						
+				{ reservations && reservations.map(reservation =><tr>
 							<td>
-								<p>New Dashboard</p>
-								<p>Google</p>
-							</td>
-							<td>
-								<p>17th Oct, 15</p>
-								<p class="text-danger">Overdue</p>
-							</td>
-							<td class="member">
-							
-								<div class="member-info">
-									<p>Myrtle Erickson</p>
-									<p>UK Design Team</p>
-								</div>
+								<p>{reservation.product_id.name}</p>
+								<p> {reservation.product_id.description}</p>
 							</td>
 							<td>
-								<p>$4,670</p>
-								<p>Paid</p>
-							</td>
-							<td class="status">
-								<span class="status-text status-orange">In progress</span>
-							</td>
-							<td>
-								<form class="form" action="#" method="POST">
-								<select class="action-box">
-									<option>Actions</option>
-									<option>Start project</option>
-									<option>Send for QA</option>
-									<option>Send invoice</option>
-								</select>
-								</form>
-							</td>
-						</tr>
-						<tr class="danger-item">
-							<td>
-								<p>New Dashboard</p>
-								<p>Google</p>
-							</td>
-							<td>
-								<p>17th Oct, 15</p>
-								<p class="text-danger">Overdue</p>
-							</td>
-							<td class="member">
-							
-								<div class="member-info">
-									<p>Myrtle Erickson</p>
-									<p>UK Design Team</p>
-								</div>
-							</td>
-							<td>
-								<p>$4,670</p>
-								<p>Paid</p>
-							</td>
-							<td class="status">
-								<span class="status-text status-red">Blocked</span>
-							</td>
-							<td>
-								<form class="form" action="#" method="POST">
-									<select class="action-box">
-										<option>Actions</option>
-										<option>Start project</option>
-										<option>Send for QA</option>
-										<option>Send invoice</option>
-									</select>
-								</form>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>New Dashboard</p>
-								<p>Google</p>
-							</td>
-							<td>
-								<p>17th Oct, 15</p>
-								<p class="text-danger">Overdue</p>
-							</td>
-							<td class="member">
-							
-								<div class="member-info">
-									<p>Myrtle Erickson</p>
-									<p>UK Design Team</p>
-								</div>
-							</td>
-							<td>
-								<p>$4,670</p>
-								<p>Paid</p>
-							</td>
-							<td class="status">
-								<span class="status-text status-orange">In progress</span>
-							</td>
-							<td>
-								<form class="form" action="#" method="POST">
-									<select class="action-box">
-						  <option>Actions</option>
-						  <option>Start project</option>
-						  <option>Send for QA</option>
-						  <option>Send invoice</option>
-						</select>
-								</form>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>New Dashboard</p>
-								<p>Google</p>
-							</td>
-							<td>
-								<p>17th Oct, 15</p>
-								<p class="text-danger">Overdue</p>
-							</td>
-							<td class="member">
-							
-								<div class="member-info">
-									<p>Myrtle Erickson</p>
-									<p>UK Design Team</p>
-								</div>
-							</td>
-							<td>
-								<p>$4,670</p>
-								<p>Paid</p>
-							</td>
-							<td class="status">
-								<span class="status-text status-blue">Early stages</span>
-							</td>
-							<td>
-								<form class="form" action="#" method="POST">
-									<select class="action-box">
-						  <option>Actions</option>
-						  <option>Start project</option>
-						  <option>Send for QA</option>
-						  <option>Send invoice</option>
-						</select>
-								</form>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>New Dashboard</p>
-								<p>Google</p>
-							</td>
-							<td>
-								<p>17th Oct, 15</p>
-								<p class="text-danger">Overdue</p>
-							</td>
-							<td class="member">
 								
+								<p class="text-danger">{reservation.time} Min </p>
+							</td>
+							<td class="member">
+							
 								<div class="member-info">
-									<p>Myrtle Erickson</p>
-									<p>UK Design Team</p>
+									<p>{reservation.user_id.name}</p>
+									<p>{reservation.user_id.username}</p>
 								</div>
 							</td>
 							<td>
-								<p>$4,670</p>
-								<p>Paid</p>
+								<p> {reservation.product_id.price} DH</p>
+								<p>Not Paid</p>
 							</td>
 							<td class="status">
-								<span class="status-text status-orange">In progress</span>
+								<span class="status-text status-orange">{reservation.status}</span>
 							</td>
 							<td>
-								<form class="form" action="#" method="POST">
-									<select class="action-box">
-						  <option>Actions</option>
-						  <option>Start project</option>
-						  <option>Send for QA</option>
-						  <option>Send invoice</option>
-						</select>
-								</form>
+							<button onClick={() => deletOrders(reservation.id)} type='submit'><i class="fa-solid fa-trash-can btndelet"></i></button>  
 							</td>
 						</tr>
+						)}
+						
+						
+						
 					</table>
 				</div>
 			</div>
