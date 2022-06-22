@@ -24,7 +24,7 @@ export default function Productes() {
         getAllProductes();
     }, []);
 
-     const  deleteFoods = async (id) => {
+     const  deleteProduct = async (id) => {
    
         try{
             
@@ -41,15 +41,7 @@ export default function Productes() {
         }
     }
 
-    const handleDelete = (_id) => {
-    
-    
-    
-    
-      
-     
-      
-      };
+   
     return (
 
         <div>
@@ -163,14 +155,15 @@ export default function Productes() {
   <a href="/login">
   <i class="fa-solid fa-pen  btnupdate"></i>
  </a>
-  <button type='submit' onClick={() => deleteFoods(producte._id)}><i class="fa-solid fa-trash-can btndelet"></i></button>  
+  <button type='submit' onClick={() => deleteProduct(producte._id)}><i class="fa-solid fa-trash-can btndelet"></i></button>  
 
 
   <div className="close_it">
     <i className="fas fa-times" />
   </div>
   <div className="infos_left">
-    <div className="image_container4" >
+    <div className="image_container"  >
+        <img src={producte.image_cover} alt="" />
     </div>
     <div className="prix_block">
       <span className="text_prix">Prix : </span>

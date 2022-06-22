@@ -1,6 +1,40 @@
 import React from 'react'
 import './css/Customers.css'
+import axios from 'axios';
+import { useEffect,useState } from 'react';
 export default function Customers() {
+
+	const [users, getusers] = useState(false);
+	const getAllUsers = () => {
+        axios.get('http://localhost:8000/api/client/')
+            .then((res) => {
+                const allUsers = res.data.data;
+                getusers(allUsers);
+                console.log('res',allUsers);
+            })
+            .catch(error => console.error(`error:${error}`));
+    }
+    useEffect(() => {
+        getAllUsers();
+    }, []);
+
+	const  deletClient = async (id) => {
+   
+        try{
+            
+     
+            const response = await axios.delete('http://localhost:8000/api/client/'+id);
+
+            let user = response.data.users
+       window.location="/customers";
+    
+        }catch(err){
+    console.log('this is error');
+    
+        }
+    }
+	
+
   return (
     <div>
             <nav className='navdash'>
@@ -69,52 +103,67 @@ export default function Customers() {
 				
 			</div>
 		</nav>
+	
+
 		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 my-3">
-			<div class="card-list">
-				<div class="row">
-                <header class="projects-header">
-						<div class="title">All Customers</div>
-						<div class="count">| 32 Customer</div>
+			
+			<div class="projects mb-4">
+				<div class="projects-inner">
+					<header class="projects-header">
+						<div class="title">All Réservations</div>
+						<div class="count">| {users.length} Réservation</div>
 						<i class="zmdi zmdi-download"></i>
 					</header>
-
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card blue">
-							<div class="title">all projects</div>
-							<i class="zmdi zmdi-upload"></i>
-							<div class="value">89</div>
-							<div class="stat"><b>13</b>% increase</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card green">
-							<div class="title">team members</div>
-							<i class="zmdi zmdi-upload"></i>
-							<div class="value">5,990</div>
-							<div class="stat"><b>4</b>% increase</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card orange">
-							<div class="title">total budget</div>
-							<i class="zmdi zmdi-download"></i>
-							<div class="value">$80,990</div>
-							<div class="stat"><b>13</b>% decrease</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-						<div class="card red">
-							<div class="title">new customers</div>
-							<i class="zmdi zmdi-download"></i>
-							<div class="value">3</div>
-							<div class="stat"><b>13</b>% decrease</div>
-						</div>
-					</div>
+					<table class="projects-table">
+						<thead>
+							<tr>
+								<th>Full Name</th>
+								<th>Age</th>
+								<th>Email</th>
+								<th>Sex</th>
+								<th>Phone</th>
+								
+							</tr>
+						</thead>
+						
+				{ users && users.map(user =><tr>
+							<td>
+								<p>{user.name}</p>
+								<p>{user.username}</p>
+							</td>
+							<td>
+								
+								<p class="text-danger">17 ans </p>
+							</td>
+							<td class="member">
+							
+								<div class="member-info">
+									<p>{user.email}</p>
+									
+								</div>
+							</td>
+							<td>
+								<p>Homme</p>
+								
+							</td>
+							<td class="status">
+						     	<i class="fa-solid fa-phone"></i>  : 
+								<span >   {user.phone} </span>
+							</td>
+							<td>
+							<button onClick={ () => deletClient(user.id)}  type='submit'><i class="fa-solid fa-trash-can btndelet"></i></button>  
+							</td>
+						</tr>
+						)}
+						
+						
+						
+					</table>
 				</div>
 			</div>
 			
-			
 		</main>
+
 	</div>
 </div>
     </div>
