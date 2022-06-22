@@ -4,23 +4,17 @@ const Order = require('../models/Order');
 const createOrder =  (req, res) => {
   console.log(req.body);
     try {
-      const address = req.body.address
-      const orderItems = req.body.orderItems
+      
+      const time=req.body.time
       const user_id = req.body.user_id
       const product_id = req.body.product_id
-      const liv_id = req.body.liv_id
-      let total = 0
-      orderItems.forEach(orderItme =>{
-
-          total += orderItme.price * orderItme.qty
-
-        })
+     
+     
+     
       const newOrder = new Order({
-          address: address,
-            total : total,
+          
           user_id: user_id,
-          liv_id: liv_id,
-          orderItems:orderItems,  
+          time:time,
           product_id:product_id
 
       })
@@ -34,9 +28,8 @@ const createOrder =  (req, res) => {
 
   const getOrder = async (req, res) => {
 
-    const order = await Order.findById(req.params.id).populate('user_id')
-    .populate('orderItems.products')
-    .populate('liv_id')
+    const order = await Order.findById(req.params.id)
+    
 
      res.status(200).json({
        success:true,
@@ -47,8 +40,7 @@ const createOrder =  (req, res) => {
   const getorders = async (req, res) => {
     
     try {
-      const orders = await Order.find()
-
+      const orders = await Order.find().populate('product_id',"name description price ").populate('user_id',"username name phone email ")
       res.status(200).json({success: true , order: orders})
     }catch(error){
       res.status(404).json({success: false , data: [], error: error})
@@ -71,14 +63,22 @@ const createOrder =  (req, res) => {
   }
 
   const deleteorder = async (req,res)=> {
-
-  const id=req.params.id;
-
-  let orders = await Order.remove();
+   await Order.deleteOne({id: req.params._id});
   return res.status(200).json({
       success:true
     })
   };
+  // const deleteorder = async (req, res) => {
+  //   const orderId = req.params.orderId
+  //   try {
+  //     await order.remove({ id: orderId })
+  //     res.status(200).json({ success: true, data: deleteorder })
+  //   } catch (error) {
+  //     res.status(409).json({ success: false, data: [], error: error })
+  //   }
+  // }
+
+
   const AdminUpdateOrderStatus = async (req,res) =>{
     try{
       const orderId = req.params.orderId
@@ -114,15 +114,15 @@ const sendEmail = async (req, res) => {
     service: 'gmail',
     auth: {
 
-      user: 'yahiaelhabchi476@gmail.com',
-      pass: 'yahya2027@',
+      user: 'amine2020zouhaid@gmail.com',
+      pass: 'amine123',
 
   }
   });
 
   let mailOptions = {
-      from: 'yahiaelhabchi476@gmail.com', // sender address
-      to: "yahyaelhabchi476@gmail.com", // list of receivers
+      from: 'ana2017benani@gmail.com', // sender address
+      to: "amine2020zouhaid@gmail.com", // list of receivers
       
 
 

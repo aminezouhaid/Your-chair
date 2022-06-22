@@ -8,27 +8,34 @@ const {
 const creatProduct = async (req, res) => {
 
     console.log('request',req.body);
+   
 
     try {
       const name = req.body.name
       const description = req.body.description
       const price = req.body.price
-      const category = req.body.category
+      const image_cover = req.body.image_cover
+      // const category = req.body.category
+      
+
 
 
       const newProduct = new Product({
         name: name,
         description: description,
         price: price,
-        category: category,
+        image_cover:image_cover,
+        // category: category,
         // user_id:user_id
       })
+      console.log('hfhffjjfjjfjfjfjfj',req.file)
 
         if (req.file) {
-        newProduct.image_cover = req.file.originalname
+        newProduct.image_cover = req.file.filename
       }
       const saveProduct = await newProduct.save()
       res.status(201).json({ success: true, data: saveProduct })
+      
 
     } catch (error) {
           console.log(error)

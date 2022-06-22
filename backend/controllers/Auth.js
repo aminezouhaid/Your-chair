@@ -34,6 +34,7 @@ const userLogin = async (userCreds,role,res)=>{
         message:"Please make sure you are logging in from the portal.",
         success:false
       });
+
     }
     //That means user is existing and tryning to signin the right portal
     //Now check for the password 

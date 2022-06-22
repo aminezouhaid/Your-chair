@@ -7,34 +7,19 @@ const OrderSchema = new Schema   (
             type: Schema.Types.ObjectId, ref:'users' ,
             
         },
-        liv_id: {
-            default:null,
-            type: Schema.Types.ObjectId, ref:'users' ,
-
+       
+        product_id:{
+            type: Schema.Types.ObjectId, ref:'Product' ,
         },
-        orderItems: [
-           {
-               name: { type: String , required: true},
-               email: { type: String , required: true},
-               price: { type: Number , required: true},
-               product: { 
-                   type: Schema.Types.ObjectId, ref:'products' ,
-                   required: true
-                },
-      
-            }
-        ],
 
-       date:{type:Date,required: true },
+       time:{type:String,
+        required: true },
         
-        total: {
-            type: Number,
-            required: true
-        },
+        
         status:{
             type:String,
-            default:"new",
-            enum:["new","inprogress", "inliv","delivred","done"]
+            default:"Reserved",
+            enum:["inprogress","Reserved"]
         },
      
     },

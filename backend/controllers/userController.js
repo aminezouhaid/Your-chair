@@ -3,12 +3,12 @@ const user = require('../models/User');
 
 
 
-const getusers = async (req,res,role)=> {
-    let users = await user.find({role:role});
+const getusers = async (req,res)=> {
+    let users = await user.find();
     return res.status(200).json({
        data:users,
-        message:"Hurray ! You ar now Get all users .",
-        success:false
+        message:"Hurray ! You ar Get all users .",
+        success:true
       })
   };
   const getuser = async (req, res) => {
@@ -28,7 +28,8 @@ const getusers = async (req,res,role)=> {
       const {name}= req.body;
       const {email}= req.body;
       const {username}= req.body;
-      let newvalues = { $set: {name: name, email:email, username:username} };
+      const {phone}= req.body;
+      let newvalues = { $set: {name: name, email:email, username:username,phone:phone} };
     let users = await user.updateOne({_id:idusers}, newvalues);
     return res.status(200).json({
         ...users,
@@ -37,19 +38,26 @@ const getusers = async (req,res,role)=> {
       })
   };
 
-  const deleteuser = async (req,res)=> {
-    const idusers=req.params.userid;
+//   const deleteuser = async (req,res)=> {
+   
 
-    let users = await user.deleteOne({_id:idusers});
-    return res.status(200).json({
-      data:users,
-        message:"Hurray ! You ar now Delet user Par ID .",
-        success:false
-      })
-};
+//     let users = await user.deleteOne({_id: req.params.userid});
+//     return res.status(200).json({
+//       data:users,
+//         message:"Hurray ! You ar  Delet user Par ID .",
+//         success:true
+//       })
+// };
+
+const deleteuser = async (req,res)=> {
+  await user.deleteOne({id: req.params._id});
+ return res.status(200).json({
+     success:true
+   })
+ };
+
 
   module.exports = {
-
     getusers ,
     updateuser  ,
     deleteuser,

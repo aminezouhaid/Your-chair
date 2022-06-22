@@ -44,12 +44,9 @@ const ProductSchema = new Schema   (
         },
         image_cover: {
             type: String,
-            required: false
+            required: true
         },
-        category: {
-            type: Schema.Types.ObjectId, ref:'categories' ,
-            required: false
-        },
+       
 
        
         // reviews: [ReviewSchema],
