@@ -162,7 +162,7 @@ export default function Productes() {
     <i className="fas fa-times" />
   </div>
   <div className="infos_left">
-    <div className="image_container"  >
+    <div className="image_container1"  >
         <img src={producte.image_cover} alt="" />
     </div>
     <div className="prix_block">

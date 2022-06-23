@@ -69,9 +69,9 @@ export default function Home() {
    <div className='coupeCheveux'>
 
 <div className="restaurant">
-  <div className="reservation_btn">
+ <a href="/login"><div className="reservation_btn">
     Réserver
-  </div>
+  </div></a>
   <div className="close_it">
     <i className="fas fa-times" />
   </div>
