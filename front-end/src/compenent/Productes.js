@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './css/product.css'
 export default function Productes() {
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
+    
     const [productes, getProductes] = useState(false);
 
     const getAllProductes = () => {
@@ -24,6 +18,8 @@ export default function Productes() {
         getAllProductes();
     }, []);
 
+  
+  
      const  deleteProduct = async (id) => {
    
         try{
