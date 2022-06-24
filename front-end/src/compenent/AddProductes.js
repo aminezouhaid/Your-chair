@@ -58,12 +58,13 @@ export default function AddProductes() {
 	<div class="row">
 		
 		<main role="main" class="allmain">
-			
+			  <a href="/productes"><button className='buttonAdd col-md-1 m-6'>Back</button></a>
 			<div class="project mb-4">
 				<div class="projects-inner">
 					<header class="projects-header">
-						<div class="title">All Réservations</div>
-						<div class="count">| Réservation</div>
+        
+						<div class="title">Add Product</div>
+						<div class="count">| New</div>
 						<i class="zmdi zmdi-download"></i>
 					</header>
 					

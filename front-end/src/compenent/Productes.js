@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './css/product.css'
 export default function Productes() {
-    
+
     const [productes, getProductes] = useState(false);
 
     const getAllProductes = () => {
@@ -83,12 +83,7 @@ export default function Productes() {
                                         Dashboard <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="/reservation">
-                                        <i class="zmdi zmdi-file-text"></i>
-                                        Réservation
-                                    </a>
-                                </li>
+                                
                                 <li class="nav-item">
                                     <a class="nav-link active " href="/productes">
                                         <i class="zmdi zmdi-shopping-cart"></i>
@@ -104,7 +99,7 @@ export default function Productes() {
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <i class="zmdi zmdi-chart"></i>
-                                        Reports
+                                        Statique
                                     </a>
                                 </li>
 

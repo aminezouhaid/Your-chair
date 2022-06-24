@@ -4,9 +4,9 @@ import Register from './compenent/Register';
 import Loginadmin from './compenent/Loginadmin';
 import Dashbordadmin from './compenent/Dashbordadmin';
 import Customers from './compenent/Customers';
-import Reservation from './compenent/Reservation';
 import Productes from './compenent/Productes';
 import AddProductes from './compenent/AddProductes'
+import Lougout from './compenent/lougout';
 import './App.css';
 import { Routes,Route } from 'react-router';
 
@@ -20,9 +20,8 @@ function App() {
    <Route path='/loginadmin' element={<Loginadmin/>} /> 
    <Route path='/dashboardadmin' element={<Dashbordadmin/>} /> 
    <Route path='/customers' element={<Customers/>} /> 
-   <Route path='/reservation' element={<Reservation/>} /> 
    <Route path='/productes' element={<Productes/>} /> 
-
+   <Route path='/lougout' element={<Lougout/>} /> 
    <Route path='/addproductes' element={<AddProductes/>} /> 
 
    
