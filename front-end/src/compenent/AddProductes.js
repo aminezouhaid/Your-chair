@@ -29,9 +29,9 @@ export default function AddProductes() {
 <div class="container-fluid">
 	<div class="row">
 		
-		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 my-3">
+		<main role="main" class="allmain">
 			
-			<div class="projects mb-4">
+			<div class="project mb-4">
 				<div class="projects-inner">
 					<header class="projects-header">
 						<div class="title">All Réservations</div>
@@ -42,40 +42,41 @@ export default function AddProductes() {
 						
 				
 						<div>
-  div class="form-body"&gt;
+  <div class="form-body">
+
   <div className="row">
     <div className="form-holder">
       <div className="form-content">
         <div className="form-items">
          
           <form className="requires-validation" noValidate>
+         
             <div className="col-md-6">
             <label className="form-check-label">Name</label>
               <input className="form-control" type="text" name="name" placeholder="Full Name" required />
              
             </div>
             <div className="col-md-6">
-            <label className="form-check-label">Discription</label>
+            <label className="form-check-label "size="50">Discription</label>
               <input className="form-control" type="email" name="email" placeholder="E-mail Address" required />
              
             </div>
-            <div className="col-md-6">
-            <label className="form-check-label">Price</label>
-            <input className="form-control" type="text" name="name" placeholder="Full Name" required />
-
-              
-            </div>
-            <div className="col-md-6">
+            
+            <div className="col-md-12 mb-6" >
+             <div className="col-md-12">
+              <label classname="form-check-label">Price</label>
+               <input classname="form-control" type="text" name="name" placeholder="Full Name" required />
+             </div>
+  
+           
+            <div className="col-md-12">
             <label className="form-check-label">Image</label>
-              <input className="form-control" type="file" name="image" placeholder="Image" required />
-             
+              <input className="form-control" type="file" required  />
+              </div>
+
             </div>
-          
-            <div className="form-check">
-             
-            </div>
-            <div className="form-button m-6">
-              <button id="submit" type="submit" className="btn btn-primary">Register</button>
+            <div className="form-button ">
+              <button id="submit" type="submit" className="btn btn-primary">Add Product</button>
             </div>
           </form>
         </div>
@@ -85,15 +86,15 @@ export default function AddProductes() {
                         </div> 
 
 						
-						
-					
+             
 				</div>
 			</div>
-			
+			</div>
 		</main>
-	</div>
+	</div>	
 </div>
     </div>
+    
     
   )
 }

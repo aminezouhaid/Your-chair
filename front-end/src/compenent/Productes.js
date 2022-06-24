@@ -67,7 +67,7 @@ export default function Productes() {
                 <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">YOU'R CHAIR</a>
                 <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
-               <button className='buttonAdd'>+ Add Products</button>
+               <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>
                
 
 
