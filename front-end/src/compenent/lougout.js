@@ -6,9 +6,13 @@ export default function lougout() {
 	   
 		window.location="/login";
 		return jwt;
+
 	  
 	  
 	  }
+
+
+      
   return (
     <div> <nav className='navdash'>
     <div className='logoadmin'>
@@ -25,7 +29,7 @@ export default function lougout() {
 <small>   <span className="btn" style={{cursor:'pointer'}}  onClick={signout} > Logout </span> </small>       </nav>
 
 
- <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
+ <nav class="navbar1 navbar-dark sticky-top flex-md-nowrap p-0">
 <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">WELCOOM ADMIN </a>
 <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
 <ul class="navbar-nav px-3">

@@ -1,16 +1,8 @@
 import axios from 'axios';
 import { useEffect,useState } from 'react';
 import './css/dashbord.css'
-import Lougout from './lougout';
 export default function Dashbordadmin() {
-	const signout =  () =>{
-		const jwt =  localStorage.removeItem('token');
-	   
-		window.location="/login";
-		return jwt;
-	  
-	  
-	  }
+	
 	  const [reservations, getreservations] = useState(false);
 	  const url = "http://localhost:8000/api/orders"
 	  const getAllreservations =  async () => {
@@ -48,7 +40,34 @@ export default function Dashbordadmin() {
   
   return (
     <div> 
-		<Lougout/>    
+	   
+	   <nav className='navdash'>
+                <div className='logoadmin'>
+                    <div><img className='logoimgsdash' src={require("./img/logo2.png")} /></div>
+                </div>
+                <div className='menu'>
+                    <a className='homebtn' href="/">HOME</a>
+                    <a className='btn' href="#">ABOUT</a>
+                    <a className='btn' href="#">PRODUCT</a>
+                    <a className='btn' href="#">CONTACT</a>
+
+                </div>
+                <div className='profile'><a className='btn' href=""><button>Logout</button></a> </div>
+            </nav>
+
+
+            <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WELCOOME ADMIN</a>
+                <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
+                <ul class="navbar-nav px-3">
+               <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>
+               
+
+
+               
+
+                </ul>
+            </nav>
 		
 <div class="container-fluid">
 	<div class="row">

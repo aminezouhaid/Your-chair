@@ -188,21 +188,32 @@ export default function Home() {
 
   <div className="col-3 style1 Tous  coiffants ">
   <div className="hovereffect">
-    <div className="content-txt">
-      <p className="title">Huile à barbe</p>
-      <h2 className="disc">BEARD OIL</h2>
+    <div className="content-txt2">
+        <div>
+            <p className="prodTitle">Huile à barbe</p>
+            <h1 className="prodTitle">BEARD OIL</h1>
+       </div>
+      
+      <a href="#">
+    <i class="shp fa-solid fa-cart-shopping"></i>
+ </a>
     </div>
     <img className="img-responsive" src="https://thebarbercompany.fr/wp-content/uploads/2019/09/2019-10_571x571_BEARDOIL_TBC.jpg" alt />
-    
+   
   </div>
 </div>
 
 
 <div className="col-3 style1 Tous  coiffants ">
   <div className="hovereffect">
-    <div className="content-txt">
-      <p className="title">Poudre Texturisante</p>
-      <h2 className="disc">DESIGN POWDER</h2>
+    <div className="content-txt2">
+        <div>
+      <p className="prodTitle">Poudre Texturisante</p>
+      <h2 className="prodTitle">DESIGN POWDER</h2>
+      </div>
+      <a href="#">
+    <i class="shp fa-solid fa-cart-shopping"></i>
+ </a>
     </div>
     <img className="img-responsive" src="https://thebarbercompany.fr/wp-content/uploads/2021/12/DESIGN-POWDER.jpg" alt />
     
@@ -211,15 +222,19 @@ export default function Home() {
 
 <div className="col-3 style1 Tous  coiffants ">
   <div className="hovereffect">
-    <div className="content-txt">
-      <p className="title">Pâte Modelante</p>
-      <h2 className="disc">DESIGN PASTE</h2>
+    <div className="content-txt2">
+        <div>
+      <p className="prodTitle">Pâte Modelante</p>
+      <h2 className="prodTitle">DESIGN PASTE</h2>
+      </div>
+      <a href="#">
+    <i class="shp fa-solid fa-cart-shopping"></i>
+ </a>
     </div>
     <img className="img-responsive" src="https://thebarbercompany.fr/wp-content/uploads/2021/03/BARBER-COMPANY-PASTE-V2.jpg" alt />
     
   </div>
 </div>
-
 
   </div>
 

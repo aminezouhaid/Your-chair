@@ -1,0 +1,56 @@
+.alluserhome{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #caced2;
+}
+.petit1{
+    height:auto;
+    padding: 20px;
+    background-color: #caced2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+.petit2{
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+}
+
+    .navbar{
+     
+        height: 80px;
+        width: 100%;
+        background-color:#273142;
+        z-index: 5;
+    }
+.rounded-circle{
+    height: 50px;
+    width: 50px;
+}
+
+.grandTitle2{
+    font-family: 'rockwell';
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    max-height: 35px;
+}
+.content-txt2{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   height: 50%;
+ 
+   margin: 15px;
+}
+.prodTitle{
+  
+    
+    font-size: 20px;
+}
+.shp {
+     font-size: 20px;
+}

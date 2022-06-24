@@ -43,11 +43,12 @@ export default function Login() {
         
         toastr.success('Welcome User' ,{
           positionClass: "toast-bottom-left",
+
           
         })
         
         
-        window.location="/";alert("done Bro <3")
+        window.location="/userhome";alert("done Bro <3")
       }else{
         window.location="/dashboardadmin"
         toastr.success('Welcome Admin')

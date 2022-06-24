@@ -6,7 +6,7 @@ import Dashbordadmin from './compenent/Dashbordadmin';
 import Customers from './compenent/Customers';
 import Productes from './compenent/Productes';
 import AddProductes from './compenent/AddProductes'
-import Lougout from './compenent/lougout';
+import UserHome from './compenent/UserHome';
 import './App.css';
 import { Routes,Route } from 'react-router';
 
@@ -21,8 +21,9 @@ function App() {
    <Route path='/dashboardadmin' element={<Dashbordadmin/>} /> 
    <Route path='/customers' element={<Customers/>} /> 
    <Route path='/productes' element={<Productes/>} /> 
-   <Route path='/lougout' element={<Lougout/>} /> 
+  
    <Route path='/addproductes' element={<AddProductes/>} /> 
+   <Route path='/userhome' element={<UserHome/>} /> 
 
    
 

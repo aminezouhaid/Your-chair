@@ -1,7 +1,5 @@
 import React from 'react'
 import './css/addP.css'
-import Footer from './Footer'
-import Navbar from './Navbar'
 import { useState } from 'react'
 import axios from 'axios'
 export default function AddProductes() {

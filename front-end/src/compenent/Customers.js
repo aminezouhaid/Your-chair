@@ -2,7 +2,6 @@ import React from 'react'
 import './css/Customers.css'
 import axios from 'axios';
 import { useEffect,useState } from 'react';
-import Lougout from './lougout';
 export default function Customers() {
 
 	const [users, getusers] = useState(false);
@@ -38,7 +37,35 @@ export default function Customers() {
 
   return (
     <div>
-       <Lougout/>
+      <nav className='navdash'>
+                <div className='logoadmin'>
+                    <div><img className='logoimgsdash' src={require("./img/logo2.png")} /></div>
+                </div>
+                <div className='menu'>
+                    <a className='homebtn' href="/">HOME</a>
+                    <a className='btn' href="#">ABOUT</a>
+                    <a className='btn' href="#">PRODUCT</a>
+                    <a className='btn' href="#">CONTACT</a>
+
+                </div>
+                <div className='profile'><a className='btn' href=""><button>Logout</button></a> </div>
+            </nav>
+
+
+            <nav class=" navbar navbar-dark sticky-top flex-md-nowrap p-0">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WELCOOME ADMIN</a>
+                <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
+                <ul class="navbar-nav px-3">
+               <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>
+               
+
+
+               
+
+                </ul>
+            </nav>
+		
+      
 <div class="container-fluid">
 	<div class="row">
 		<nav class="col-md-2 d-none d-md-block sidebar">
