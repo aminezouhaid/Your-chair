@@ -7,6 +7,7 @@ import Customers from './compenent/Customers';
 import Productes from './compenent/Productes';
 import AddProductes from './compenent/AddProductes'
 import UserHome from './compenent/UserHome';
+import Reservation from './compenent/Reservation';
 import './App.css';
 import { Routes,Route } from 'react-router';
 
@@ -21,7 +22,7 @@ function App() {
    <Route path='/dashboardadmin' element={<Dashbordadmin/>} /> 
    <Route path='/customers' element={<Customers/>} /> 
    <Route path='/productes' element={<Productes/>} /> 
-  
+   <Route path='/reservation' element={<Reservation/>} /> 
    <Route path='/addproductes' element={<AddProductes/>} /> 
    <Route path='/userhome' element={<UserHome/>} /> 
 

@@ -154,7 +154,7 @@ export default function Productes() {
   </div>
   <div className="infos_left">
     <div className="image_container1"  >
-        <img src={producte.image_cover} alt="" />
+        <img  alt="" />
     </div>
     <div className="prix_block">
       <span className="text_prix">Prix : </span>

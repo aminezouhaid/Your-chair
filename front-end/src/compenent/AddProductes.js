@@ -98,7 +98,7 @@ export default function AddProductes() {
            
             <div className="col-md-12">
             <label className="form-check-label">Image</label>
-              <input className="form-control"  onChange={handelChange} type="file"  name='image_cover' id='image_cover'   />
+              <input className="form-control"  onChange={handelChange} type="time"  name='image_cover' id='image_cover'   />
               </div>
 
             </div>

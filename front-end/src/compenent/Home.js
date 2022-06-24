@@ -239,7 +239,6 @@ export default function Home() {
   </div>
 
 </div>
-
 <div className='allCostmers'>
   <div className="containerB">
     <div className="mgb-40 padb-30 auto-invert line-b-4 align-center">
