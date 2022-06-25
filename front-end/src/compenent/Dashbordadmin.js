@@ -1,7 +1,15 @@
 import axios from 'axios';
 import { useEffect,useState } from 'react';
 import './css/dashbord.css'
+import jwtdecode from "jwt-decode";
+
 export default function Dashbordadmin() {
+	const jwt =  localStorage.getItem('token');
+
+	const JWT1 =jwtdecode(jwt);
+
+console.log('token',JWT1);
+	
 	
 	  const [reservations, getreservations] = useState(false);
 	  const url = "http://localhost:8000/api/orders"
@@ -44,6 +52,8 @@ export default function Dashbordadmin() {
 	   <nav className='navdash'>
                 <div className='logoadmin'>
                     <div><img className='logoimgsdash' src={require("./img/logo2.png")} /></div>
+					<a className=' text-light'>DASHBOARD ADMIN</a>
+
                 </div>
                 <div className='menu'>
                     <a className='homebtn' href="/">HOME</a>
@@ -57,7 +67,7 @@ export default function Dashbordadmin() {
 
 
             <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
-                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WELCOOME ADMIN</a>
+                <a class="navbar-brand col-sm-3  col-md-2 mr-0" href="#"> WELCOOME  <br/> <span className="text-warning ml-2">  {JWT1.name} {JWT1.username} </span> </a>
                 <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
                <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>

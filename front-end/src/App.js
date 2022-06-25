@@ -9,6 +9,7 @@ import AddProductes from './compenent/AddProductes'
 import UserHome from './compenent/UserHome';
 import Reservation from './compenent/Reservation';
 import './App.css';
+import Update from './compenent/Update';
 import { Routes,Route } from 'react-router';
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
    <Route path='/dashboardadmin' element={<Dashbordadmin/>} /> 
    <Route path='/customers' element={<Customers/>} /> 
    <Route path='/productes' element={<Productes/>} /> 
-   <Route path='/reservation' element={<Reservation/>} /> 
+   <Route path='/reservation/:id' element={<Reservation/>} /> 
    <Route path='/addproductes' element={<AddProductes/>} /> 
    <Route path='/userhome' element={<UserHome/>} /> 
+   <Route path='/update' element={<Update/>} /> 
 
    
 

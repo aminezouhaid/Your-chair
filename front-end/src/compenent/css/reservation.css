@@ -13,6 +13,12 @@ border: solid red 1px;
     width: 60%;
     border: solid yellow 1px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './css/product.css'
+import jwtdecode from "jwt-decode";
+
 export default function Productes() {
+
+    const jwt =  localStorage.getItem('token');
+
+	const JWT1 =jwtdecode(jwt);
+
+console.log('token',JWT1);
+	
 
     const [productes, getProductes] = useState(false);
 
@@ -47,6 +56,8 @@ export default function Productes() {
             <nav className='navdash'>
                 <div className='logoadmin'>
                     <div><img className='logoimgsdash' src={require("./img/logo2.png")} /></div>
+                    <a className=' text-light'>DASHBOARD ADMIN</a>
+
                 </div>
                 <div className='menu'>
                     <a className='homebtn' href="/">HOME</a>
@@ -60,7 +71,7 @@ export default function Productes() {
 
 
             <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
-                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WELCOOME ADMIN</a>
+            <a class="navbar-brand col-sm-3  col-md-2 mr-0" href="#"> WELCOOME  <br/> <span className="text-warning ml-2">  {JWT1.name} {JWT1.username} </span> </a>
                 <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
                <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>
@@ -143,7 +154,7 @@ export default function Productes() {
   <div className="reservation_btn">
     Réserver
   </div></a>
-  <a href="/login">
+  <a href="/update">
   <i class="fa-solid fa-pen  btnupdate"></i>
  </a>
   <button type='submit' onClick={() => deleteProduct(producte._id)}><i class="fa-solid fa-trash-can btndelet"></i></button>  

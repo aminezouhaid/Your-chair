@@ -31,6 +31,7 @@ export default function Login() {
   
           localStorage.setItem('token',res.data.token)
           const jwt =  localStorage.getItem('token');
+          
           if(jwt === undefined){
             console.log('undifend');
           }
@@ -42,7 +43,7 @@ export default function Login() {
      if(JWT1.role==="user"){
         
         toastr.success('Welcome User' ,{
-          positionClass: "toast-bottom-left",
+        
 
           
         })

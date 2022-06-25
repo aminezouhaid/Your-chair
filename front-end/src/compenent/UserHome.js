@@ -1,11 +1,20 @@
 import React from 'react'
 import './css/userhome.css'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
+import jwtdecode from "jwt-decode";
+
 
 
 export default function UserHome() {
+
+  const jwt2 =  localStorage.getItem('token');
+
+	const JWT2 =jwtdecode(jwt2);
+
+console.log('token',JWT2);
 
 
     const [productes, getProductes] = useState(false);
@@ -38,24 +47,25 @@ export default function UserHome() {
     {/* Collapsible wrapper */}
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       {/* Navbar brand */}
-      <a className="navbar-brand mt-2 mt-lg-0" href="/">
+      <a className="navbar-brand mt-2 mt-lg-0 text-warning"  href="/">
       <h1>Home</h1>
       </a>
       {/* Left links */}
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link" href="#">Productes</a>
+          <a className="nav-link text-light" href="#">Productes</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Our Bonuses</a>
+          <a className="nav-link text-light" href="#">Our Bonuses</a>
         </li>
         
         <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
+          <a className="nav-link text-light" href="#">About</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Contact</a>
+          <a className="nav-link text-light" href="#">Contact</a>
         </li>
+        
       </ul>
       {/* Left links */}
     </div>
@@ -63,9 +73,13 @@ export default function UserHome() {
     {/* Right elements */}
     <div className="d-flex align-items-center">
       {/* Icon */}
+      <div className="nav-item">
+          <a className="nav-link text-light " href="#">Welcom <span className='text-warning'>  {JWT2.name}  {JWT2.username}</span></a>
+        </div>
       <a className="text-reset me-3" href="#">
         <i className="fas fa-shopping-cart" />
       </a>
+      
       {/* Notifications */}
       <div className="dropdown">
         <a className="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -116,10 +130,10 @@ export default function UserHome() {
 
            { productes &&   productes.map(producte =>                         
  <div className="restaurant">
-  <a href="/reservation">
+  <Link to={"/reservation/"+ producte._id}>
   <div className="reservation_btn">
     Réserver
-  </div></a>
+  </div></Link>
  
 
 
