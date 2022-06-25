@@ -219,7 +219,7 @@
     margin-top: 0;
     margin-bottom: 20px;
     background-color: white;
-    
+
 }
 
 
@@ -300,4 +300,22 @@
     height: 500px;
     background-color: #dde0e3;
     padding: 50px;
+}
+.cardprisi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+
+
+}
+.hash-list{
+    flex-wrap: wrap;
+    display: flex;
+
+}
+.textPris{
+    font-size: 15px;
+    font-family: "Nova Square";
 }
