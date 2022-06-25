@@ -4,7 +4,7 @@ const Order = require('../models/Order');
 const createOrder =  (req, res) => {
   console.log(req.body);
     try {
-      
+      const date=req.body.date
       const time=req.body.time
       const user_id = req.body.user_id
       const product_id = req.body.product_id
@@ -15,6 +15,7 @@ const createOrder =  (req, res) => {
           
           user_id: user_id,
           time:time,
+          date:date,
           product_id:product_id
 
       })
@@ -77,7 +78,6 @@ const createOrder =  (req, res) => {
   //     res.status(409).json({ success: false, data: [], error: error })
   //   }
   // }
-
 
   const AdminUpdateOrderStatus = async (req,res) =>{
     try{

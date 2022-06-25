@@ -13,7 +13,11 @@ const OrderSchema = new Schema   (
         },
 
        time:{type:String,
-        required: true },
+        required: true},
+
+
+        date:{type:String,
+            required: true},
         
         
         status:{

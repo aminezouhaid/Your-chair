@@ -52,10 +52,10 @@ const getusers = async (req,res)=> {
 const deleteuser = async (req,res)=> {
   await user.deleteOne({id: req.params._id});
  return res.status(200).json({
-     success:true
+     success:true,
+     message: "user is deleted"
    })
  };
-
 
   module.exports = {
     getusers ,

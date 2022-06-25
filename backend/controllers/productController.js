@@ -28,7 +28,7 @@ const creatProduct = async (req, res) => {
         // category: category,
         // user_id:user_id
       })
-      console.log('hfhffjjfjjfjfjfjfj',req.file)
+      console.log('Good',req.file)
 
         if (req.file) {
         newProduct.image_cover = req.file.filename
@@ -58,17 +58,15 @@ const creatProduct = async (req, res) => {
 
 
 
-
   const getProduct = async (req, res) => {
     const productId = req.params.productId
     try {
-      const product = await Product.find({ _id: productId })
+      const product = await Product.findOne({ _id: productId })
       res.status(200).json({ success: true, data: product })
     } catch (error) {
       res.status(404).json({ success: false, data: [], error: error })
     }
   }
-
 
 
 

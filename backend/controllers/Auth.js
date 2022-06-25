@@ -44,6 +44,7 @@ const userLogin = async (userCreds,role,res)=>{
         user_id:user._id,
         role:user.role,
         username:user.username,
+        name:user.name,
         email:user.email,
         phone:user.phone,
        
