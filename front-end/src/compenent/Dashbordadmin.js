@@ -56,7 +56,7 @@ console.log('token',JWT1);
 
                 </div>
                 <div className='menu'>
-                    <a className='homebtn' href="/">HOME</a>
+                    <a className='homebtn' href="/userhome">HOME</a>
                     <a className='btn' href="#">ABOUT</a>
                     <a className='btn' href="#">PRODUCT</a>
                     <a className='btn' href="#">CONTACT</a>
@@ -70,7 +70,6 @@ console.log('token',JWT1);
                 <a class="navbar-brand col-sm-3  col-md-2 mr-0" href="#"> WELCOOME  <br/> <span className="text-warning ml-2">  {JWT1.name} {JWT1.username} </span> </a>
                 <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search" />
                 <ul class="navbar-nav px-3">
-               <a href="/addproductes"><button className='buttonAdd'>+ Add Products</button></a>
                
 
 

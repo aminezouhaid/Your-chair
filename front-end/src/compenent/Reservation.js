@@ -8,16 +8,16 @@ import { useEffect } from 'react';
 import {  useParams } from 'react-router-dom';
 export default function Reservation() {
   const jwt =  localStorage.getItem('token');
-  
+  const JWT1 =jwtdecode(jwt);
+
+console.log('token',JWT1);
     const {id}=useParams()
     console.log('id',id);
 
   // console.log("hhhhh",window.location.pathname[1]); 
   // const data1= window.location.pathname;
   // const reserv= data1.split
-	const JWT1 =jwtdecode(jwt);
-
-console.log('token',JWT1);
+	
 
 // const [data, setData] = useState({});
 // const [loading, setLoading] = useState(true);
@@ -40,26 +40,31 @@ console.log('token',JWT1);
 
 const handelChange = (e) => {
   e.preventDefault();
-  setProduct({ ...order, [e.target.name]: e.target.value });
+  setData({ ...data, [e.target.name]: e.target.value });
 };
+const [data, setData] = useState(
+  {
 
-const [order, setProduct] = useState({});
-const creatBooking = (eb) => {
-  eb.preventDefault();
-
-
+    user_id:JWT1.user_id,
+    product_id:id,
+  }
+);
+console.log(JWT1.id)
+const creatProduct = () => {
+  
   
 
   try {
-    axios.post(`http://localhost:8000/api/orders/add`).then(() => {
-      window.location="/userhome";
+    axios.post(`http://localhost:8000/api/orders/add`,data).then(() => {
+      window.location="/resultat";
   
     });
   } catch (error) {
     if (error.response) {
-      console.log(error.response.data.message);
+      console.log(error.response.data.message); window.location="/";
     }
     console.log(error.message);
+   
   }
   
 };
@@ -89,7 +94,7 @@ const creatBooking = (eb) => {
           <a className="nav-link text-light" href="#">Productes </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-light" href="#">Our Bonuses</a>
+          <a className="nav-link text-light" href="#">Our Bonuses </a>
         </li>
         
         <li className="nav-item">
@@ -104,7 +109,7 @@ const creatBooking = (eb) => {
     {/* Collapsible wrapper */}
     {/* Right elements */}
     <div className="d-flex align-items-center">
-    <a className="nav-link text-light " href="#">Welcom <span className='text-warning'>  {JWT1.name}  {JWT1.username}</span></a>
+    <a className="nav-link text-light " href="#">Welcom <span className='text-warning'> {JWT1.name}  {JWT1.username}</span></a>
 
       {/* Icon */}
       <a className="text-reset me-3" href="#">
@@ -116,35 +121,17 @@ const creatBooking = (eb) => {
           <i className="fas fa-bell text-light" />
           <span className="badge rounded-pill badge-notification bg-danger">1</span>
         </a>
-        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <li>
-            <a className="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
+      
       </div>
       {/* Avatar */}
       <div className="dropdown">
         <a className="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
           <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" className="rounded-circle"  alt="Black and White Portrait of a Man" loading="lazy" />
         </a>
-        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-          <li>
-            <a className="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Settings</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
+        
       </div>
+      <div className='profile ml-6'><a className='btn' href="/"><button>Logout</button></a> </div>
+
     </div>
     {/* Right elements */}
   </div>
@@ -154,17 +141,17 @@ const creatBooking = (eb) => {
 
            </div>
            <div className='petit2'>
-           <h1 className='grandTitle2'>Chose Your Favorite Haircut </h1>
+           <h1 className='grandTitle2'>Book Your  Haircut Now </h1>
            </div>
            <div className='allCard'>
       <div className='CardAll'>
        <div className='photoR'>
-       <div class="col d-none d-lg-block mb-5">
+       <div class="col d-none d-lg-block mt-5 mb-5">
                <img class="w-100"
-                    src={require("./img/coup1.jpg")} />
+                    src={require("./img/coup3.jpg")} />
             </div>
        </div>
-       <form onSubmit={creatBooking}>
+       <form >
        <div className='information'>
       <h3> NAME : </h3> 
       <h3> DESCRIPTION : </h3>
@@ -177,7 +164,7 @@ const creatBooking = (eb) => {
         <label htmlFor=""> Book Time</label>
         <input type="time"  onChange={handelChange} name='time' />
       </div>
-      <button type="submit">book</button>
+      <button type="submit" onClick={() => creatProduct()}>book</button>
            </div>
       </form>
       </div>

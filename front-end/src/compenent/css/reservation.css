@@ -7,14 +7,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: #caced2;
-border: solid red 1px;
+
 }
 .CardAll{
     width: 60%;
-    border: solid yellow 1px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: solid black 1.5px;
+    margin: 10px;
+    border-radius:20px ;
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
 }
 .information{
     display: flex;

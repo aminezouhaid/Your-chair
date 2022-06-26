@@ -86,35 +86,17 @@ console.log('token',JWT2);
           <i className="fas fa-bell" />
           <span className="badge rounded-pill badge-notification bg-danger">1</span>
         </a>
-        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <li>
-            <a className="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
+        
       </div>
       {/* Avatar */}
       <div className="dropdown">
         <a className="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
           <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" className="rounded-circle"  alt="Black and White Portrait of a Man" loading="lazy" />
         </a>
-        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-          <li>
-            <a className="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Settings</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
+      
       </div>
+      <div className='profile ml-6'><a className='btn' href="/"><button>Logout</button></a> </div>
+
     </div>
     {/* Right elements */}
   </div>
@@ -227,7 +209,52 @@ console.log('token',JWT2);
   </div>
 
 </div> 
+<div className='feedback'>
 
+   <div className="col">
+  <div className='imagesB'><img  src="https://thebarbercompany.fr/wp-content/uploads/2019/07/Icon_club.png" alt /></div>
+  <p className="titleC">The Barber Club</p>
+  <a href="#"  className="cta-btn-gold">Rejoindre le club</a>
+</div>
+
+<div className="col">
+ <div className='imagesB'> <img src="https://thebarbercompany.fr/wp-content/uploads/2019/07/Icon_salon.png" alt /> </div>
+  <p className="titleC">Les Salons</p>
+  <a href="#"  className="cta-btn-gold">Où sommes-nous ?</a>
+</div>
+
+
+<div className="col">
+ <div className='imagesB'> <img src="https://thebarbercompany.fr/wp-content/themes/thebarbercompany/assets/img/Icon_newsletter.png" alt /> </div>
+  <p className="titleC">Newsletter</p>
+  <a  href="#" className="cta-btn-gold btn-newslatter">S'abonner</a>
+</div>
+
+<div className="col">
+<div className='imagesB'> <img src="https://thebarbercompany.fr/wp-content/themes/thebarbercompany/assets/img/Icon_reseaux_sociaux.png" alt /></div> 
+  <p className="titleC">Suivez-Nous</p>
+  <div className="resauxS">
+    <a href="#" target="_blank"><img src="https://thebarbercompany.fr/wp-content/uploads/2019/08/Icon_instagram_orange.png" alt /></a>
+    <a href="#" target="_blank"><img src="https://thebarbercompany.fr/wp-content/uploads/2019/08/Icon_facebook_orange.png" alt /></a>
+    <a href="#" target="_blank"><img src="https://thebarbercompany.fr/wp-content/uploads/2019/08/Icon_pinterest_orange.png" alt /></a>
+  </div>
+</div>
+
+
+   </div>
+
+   <div className='images'>
+    <img className='img1' src={require("./img/a.jpg")} alt="" />
+   <h1 className='ptudcut'>Product Lifestyle Gallery</h1>
+    <img className='img1' src={require("./img/salon-coiffeur.png")} alt="" />
+
+    
+   </div>
+   <div className='images'>
+   <img className='img1' src={require("./img/b.jpg")} alt="" />
+   <img className='img1' src={require("./img/c.jpg")} alt="" />
+    <img className='img1' src={require("./img/h.jfif")} alt="" />
+   </div>
        <Footer/>
     </div>
   )

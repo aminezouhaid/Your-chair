@@ -8,9 +8,13 @@ import Productes from './compenent/Productes';
 import AddProductes from './compenent/AddProductes'
 import UserHome from './compenent/UserHome';
 import Reservation from './compenent/Reservation';
+import Contact from './compenent/Contact';
+import Resultat from './compenent/Resultat';
 import './App.css';
 import Update from './compenent/Update';
 import { Routes,Route } from 'react-router';
+
+
 
 function App() {
   return (
@@ -27,6 +31,8 @@ function App() {
    <Route path='/addproductes' element={<AddProductes/>} /> 
    <Route path='/userhome' element={<UserHome/>} /> 
    <Route path='/update' element={<Update/>} /> 
+   <Route path='/contact' element={<Contact/>} /> 
+   <Route path='/resultat' element={<Resultat/>} /> 
 
    
 
