@@ -56,7 +56,7 @@ const creatProduct = () => {
 
   try {
     axios.post(`http://localhost:8000/api/orders/add`,data).then(() => {
-      window.location="/resultat";
+      window.location="/resultat/:id";
   
     });
   } catch (error) {
@@ -156,15 +156,17 @@ const creatProduct = () => {
       <h3> NAME : </h3> 
       <h3> DESCRIPTION : </h3>
       <h3> PRICE : </h3>
+      <div className='frma'>
       <div>
         <label htmlFor=""> Boook Date </label>
-        <input type="date" onChange={handelChange} name='date' />
+        <input type="date" className='form-control   datepicker' onChange={handelChange} name='date' />
       </div>
       <div>
         <label htmlFor=""> Book Time</label>
-        <input type="time"  onChange={handelChange} name='time' />
+        <input type="time" className='form-control datepicker'  onChange={handelChange} name='time' />
       </div>
-      <button type="submit" onClick={() => creatProduct()}>book</button>
+      </div>
+      <button type="submit" className='btn btn-primary mt-6' onClick={() => creatProduct()}>book</button>
            </div>
       </form>
       </div>

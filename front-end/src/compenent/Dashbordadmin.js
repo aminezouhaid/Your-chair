@@ -62,7 +62,7 @@ console.log('token',JWT1);
                     <a className='btn' href="#">CONTACT</a>
 
                 </div>
-                <div className='profile'><a className='btn' href=""><button>Logout</button></a> </div>
+                <div className='profile'><a className='btn' href="/"><button>Logout</button></a> </div>
             </nav>
 
 
@@ -127,9 +127,9 @@ console.log('token',JWT1);
 					<table class="projects-table">
 						<thead>
 							<tr>
-								<th>Réservation</th>
-								<th>Time</th>
 								<th>Customers</th>
+								<th> Book Date</th>
+								<th>Product</th>
 								<th>Price</th>
 								<th>Status</th>
 								<th class="text-right">Actions</th>
@@ -138,18 +138,19 @@ console.log('token',JWT1);
 						
 				{ reservations && reservations.map(reservation =><tr>
 							<td>
-								<p>{reservation.product_id.name}</p>
-								<p> {reservation.product_id.description}</p>
+								<p>{reservation.user_id.name}</p>
+								<p> {reservation.user_id.username}</p>
 							</td>
 							<td>
 								
-								<p class="text-danger">{reservation.time} Min </p>
+								<p class="text-light"> {reservation.date} <br/>
+									{reservation.time}  </p>
 							</td>
 							<td class="member">
 							
 								<div class="member-info">
-									<p>{reservation.user_id.name}</p>
-									<p>{reservation.user_id.username}</p>
+									<p>{reservation.product_id.name}</p>
+									<p>{reservation.product_id.description}</p>
 								</div>
 							</td>
 							<td>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import jwtdecode from 'jwt-decode'
+import './css/resultat.css'
 export default function Resultat() {
     const jwt =  localStorage.getItem('token');
     const JWT1 =jwtdecode(jwt);
@@ -77,8 +78,13 @@ export default function Resultat() {
 
      </div>
      <div className='petit2'>
-     <h1 className='grandTitle2'>Book Your  Haircut Now </h1>
-     </div>
+     <h3 className='grandTitle2'>Thank You <span className='text-warning'>{JWT1.name}  {JWT1.username}</span> </h3>
+   
+     </div> 
+     <div className='d-flex justify-center  align-items-center'>
+      <h5 className='mt-6 text-success' >Book Succes </h5>
+   <img className='imgsuccess' src={require('./img/success.jpg')} alt="" />
+   </div>
      <div className='allCard'>
 <div className='CardAll'>
  <div className='photoR'>
@@ -89,9 +95,10 @@ export default function Resultat() {
  </div>
 
 </div>
+
 </div>
 
-
+<a href="/userhome"><button type="button" class="btn btn-dark m-6 bg-dark ">Back To Home</button></a>
  <Footer/>
 </div>
   )

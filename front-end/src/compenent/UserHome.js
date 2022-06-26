@@ -77,13 +77,13 @@ console.log('token',JWT2);
           <a className="nav-link text-light " href="#">Welcom <span className='text-warning'>  {JWT2.name}  {JWT2.username}</span></a>
         </div>
       <a className="text-reset me-3" href="#">
-        <i className="fas fa-shopping-cart" />
+        <i className="fas fa-shopping-cart text-light" />
       </a>
       
       {/* Notifications */}
       <div className="dropdown">
         <a className="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-          <i className="fas fa-bell" />
+          <i className="fas fa-bell text-light" />
           <span className="badge rounded-pill badge-notification bg-danger">1</span>
         </a>
         

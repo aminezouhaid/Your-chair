@@ -24,4 +24,10 @@ background-color: #caced2;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: solid red;
+    
+}
+.frma{
+    display: flex;
+    justify-content: space-between;
 }
