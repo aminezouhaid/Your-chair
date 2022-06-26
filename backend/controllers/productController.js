@@ -8,7 +8,6 @@ const {
 const creatProduct = async (req, res) => {
 
     console.log('request',req.body);
-   
 
     try {
       const name = req.body.name
