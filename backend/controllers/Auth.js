@@ -34,7 +34,6 @@ const userLogin = async (userCreds,role,res)=>{
         message:"Please make sure you are logging in from the portal.",
         success:false
       });
-
     }
     //That means user is existing and tryning to signin the right portal
     //Now check for the password 
@@ -47,6 +46,8 @@ const userLogin = async (userCreds,role,res)=>{
         name:user.name,
         email:user.email,
         phone:user.phone,
+        age:user.age,
+        genre:user.genre,
        
       },
       SECRET ,
@@ -62,8 +63,10 @@ const userLogin = async (userCreds,role,res)=>{
           username:user.username,
           role:user.role,
           email:user.email,
-          phone:user.phone
-          
+          phone:user.phone,
+          age:user.age,
+          genre:user.genre,
+
         },
       
         token : `Bearer ${token}`,
@@ -110,6 +113,8 @@ const userLogin = async (userCreds,role,res)=>{
     username : user.username,
     email : user.email,
     name:user.name,
+    age:user.age,
+    genre:user.genre,
     _id : user._id,
     updatedAt : user.updatedAt,
     createdAt: user.createdAt,

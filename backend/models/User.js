@@ -22,12 +22,18 @@ const UserSchema = new Schema (
             type:String,
             required:true
         },
-        
+        genre:{
+            type:String,
+            required:true
+        },
+        age:{
+            type:String,
+            required:true
+        },
         phone:{
             type:String,
             required:true
         },
-
       
     },
     {
