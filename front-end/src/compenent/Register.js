@@ -13,6 +13,8 @@ export default function Register() {
 		email: "",
 		password: "",
     phone:"",
+    age:"",
+    genre:"",
 	});
 
   const submit = (e) => {
@@ -23,7 +25,10 @@ export default function Register() {
 			username: values.username,
 			email: values.email,
 			password: values.password,
-      phone: values.phone
+      phone: values.phone,
+      age: values.age,
+      genre: values.genre,
+      
 		})
 
 
@@ -96,12 +101,18 @@ export default function Register() {
 
 
           </div>
-          <div className="mb-3 flex">
+          <select onChange={(event) => handle(event)} id="genre"   className="form-control form-select mb-3" aria-label="Genre">
+  <option selected>Genre</option>
+  <option  value={"Homme"}>Homme</option>
+  <option   value={"Famme"}>Famme</option>
+</select>
+          <div className="mb-3 flex justify-between">
          
-          
-            <input type="telephone" onChange={(event) => handle(event)} id="phone" name="phone"  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder=" +212 Phone" />
+          <input type="number" onChange={(event) => handle(event)} id="age" name="age"  className="input3 form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Age" />
+            <input type="tel"onChange={(event) => handle(event)} id="phone" name="phone"  className="input3 form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="+212" />
           </div>
-          
+
+
           {/* Submit button */}
           <button type="submit"  className="loginbutton mb-3 inline-block px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-#eeb413-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
             Sign up

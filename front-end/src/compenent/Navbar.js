@@ -6,10 +6,10 @@ export default function Navbar() {
       
       <div className='menu'>
         <a className='homebtn' href="/">HOME</a>
-        <a className='btn' href="#">PRODUCT</a>
-        <a className='btn' href="#">OUR BONUSES</a>
-        <a className='btn' href="#">ABOUT</a>
-        <a className='btn' href="#">CONTACT</a>
+        <a className='btn' href="#product">PRODUCT</a>
+        <a className='btn' href="#haircut">OUR BONUSES</a>
+        <a className='btn' href="#Footer">ABOUT</a>
+        <a className='btn' href="#Footer">CONTACT</a>
 
       </div>
 

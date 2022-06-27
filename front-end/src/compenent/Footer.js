@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div>
         
-<footer class="footer-distributed">
+<footer class="footer-distributed" id='Footer'>
 
 			<div class="footer-left">
 			<a href="/"> <img className='imglogo' src={require("./img/logo2.png")}alt="" /></a>

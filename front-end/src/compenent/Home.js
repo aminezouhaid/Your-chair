@@ -12,7 +12,7 @@ export default function Home() {
     <div className='text'>
       <h5 className='title1'>You Know You’r Barber Shop</h5>
       <h1 className='title2'>Time is precious to you, so book your Chair and win your time</h1>
-      <a  className='buttonbook' href="/Login">BOOK NOW</a>
+      <a  className='buttonbook' href="/login">BOOK NOW</a>
       
     </div>
   
@@ -65,10 +65,11 @@ export default function Home() {
    <img className='img1' src={require("./img/c.jpg")} alt="" />
     <img className='img1' src={require("./img/h.jfif")} alt="" />
    </div>
-
+   <h1 className='grandTitle2  mb-6 text-light '>Chose Your Favorite Haircut </h1>
    <div className='coupeCheveux'>
 
-<div className="restaurant">
+
+<div className="restaurant" id='amine'>
  <a href="/login"><div className="reservation_btn">
     Réserver
   </div></a>
@@ -97,7 +98,7 @@ export default function Home() {
 </div>
 
 
-<div className="restaurant">
+<div className="restaurant" id='haircut'>
   <div className="reservation_btn">
     Réserver
   </div>
@@ -182,7 +183,7 @@ export default function Home() {
 </div>
 
 
-<div className='prestation'>
+<div className='prestation' id='product'>
   <h1 className='grandTitle'> Nos Produits </h1>
   <div className='allproducte'>
 

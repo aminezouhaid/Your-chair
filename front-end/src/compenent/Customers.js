@@ -126,11 +126,11 @@ console.log('token',JWT1);
 					<table class="projects-table">
 						<thead>
 							<tr>
-								<th>Full Name</th>
-								<th>Age</th>
-								<th>Email</th>
-								<th>Sex</th>
-								<th>Phone</th>
+								<th><i class="fa-solid fa-user-check"></i> Full Name</th>
+								<th><i class="fa-solid fa-cake-candles"></i> Age</th>
+								<th><i class="fa-solid fa-envelope"></i> Email</th>
+								<th><i class="fa-solid fa-user-group"></i> Sex</th>
+								<th><i class="fa-solid fa-phone"></i>  Phone</th>
 								
 							</tr>
 						</thead>
@@ -142,21 +142,21 @@ console.log('token',JWT1);
 							</td>
 							<td>
 								
-								<p class="text-danger">17 ans </p>
+								<p class="text-warning">{user.age} ans</p>
 							</td>
 							<td class="member">
 							
 								<div class="member-info">
-									<p>{user.email}</p>
+									<p>{user.email} </p>
 									
 								</div>
 							</td>
 							<td>
-								<p>Homme</p>
+								<p className='text-warning'>{user.genre}</p>
 								
 							</td>
 							<td class="status">
-						     	<i class="fa-solid fa-phone"></i>  : 
+						     	
 								<span >   {user.phone} </span>
 							</td>
 							<td>
